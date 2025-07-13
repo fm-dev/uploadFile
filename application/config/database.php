@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '103.56.148.116',
+	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => 'fajri123#',
 	'database' => 'uploadfile',
