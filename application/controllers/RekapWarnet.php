@@ -36,7 +36,7 @@ class RekapWarnet extends CI_Controller {
             mkdir($upload_path, 0755, true);  // 0755 memberikan izin yang tepat pada folder
         }
         $config['allowed_types'] = 'jpg|jpeg|png|gif'; // Jenis file yang diizinkan
-        $config['max_size'] = 2048; // Maksimal ukuran file (dalam KB)
+        $config['max_size'] = 100000; // Maksimal ukuran file (dalam KB)
         $config['encrypt_name'] = TRUE; // Enkripsi nama file agar tidak bentrok
         $this->upload->initialize($config);
 
