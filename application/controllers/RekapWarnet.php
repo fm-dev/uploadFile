@@ -49,7 +49,7 @@ class RekapWarnet extends CI_Controller {
             ];
             $this->DataUpload_model->insert('datwarnet', $data);
             $imageUrl = base_url('uploads/' . $upload_data['file_name']); // Menghasilkan URL penuh ke gambar
-            $message = "Balinet, Op dea, Jam 15.00 Shift 1 =".$this->input->post("jumlah") . $imageUrl; // Gabungkan pesan dan URL gambar
+            $message = "Balinet, Op dea, Jam 15.00 Shift 1 =".$this->input->post("jumlah")."\n" . $imageUrl; // Gabungkan pesan dan URL gambar
             $phoneNumber = '6285263676114'; // Ganti dengan nomor WhatsApp Anda (pastikan menggunakan format internasional)
             $whatsappUrl = 'https://wa.me/' . $phoneNumber . '?text=' . urlencode($message);
             redirect($whatsappUrl); 
