@@ -26,13 +26,9 @@ class RekapWarnet extends CI_Controller {
         $this->load->view("Template/footer");
     }
     public function simpanRekap(){
-        $config['upload_path'] = './uploads/'; // Folder tempat file akan disimpan
-        // Tentukan path folder
+        $config['upload_path'] = './uploads/'; 
         $upload_path = './uploads/';
-        
-        // Cek apakah folder 'uploads' ada
         if (!is_dir($upload_path)) {
-            // Jika tidak ada, buat folder baru
             mkdir($upload_path, 0755, true);  // 0755 memberikan izin yang tepat pada folder
         }
         $config['allowed_types'] = 'jpg|jpeg|png|gif'; // Jenis file yang diizinkan
@@ -57,8 +53,11 @@ class RekapWarnet extends CI_Controller {
             $phoneNumber = '6285263676114'; // Ganti dengan nomor WhatsApp Anda (pastikan menggunakan format internasional)
             $whatsappUrl = 'https://wa.me/' . $phoneNumber . '?text=' . urlencode($message);
             redirect($whatsappUrl); 
-        } else {
-           echo "Tidak Berhasil";
+        } 
+        else {
+            // Jika upload gagal, tampilkan error
+            $error_message = $this->upload->display_errors();  // Menampilkan pesan error upload
+            echo "Upload gagal: " . $error_message;  // Menampilkan error di layar
         }
 
     }
