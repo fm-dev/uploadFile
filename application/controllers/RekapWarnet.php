@@ -27,7 +27,15 @@ class RekapWarnet extends CI_Controller {
     }
     public function simpanRekap(){
         $config['upload_path'] = './uploads/'; // Folder tempat file akan disimpan
-         $config['allowed_types'] = 'jpg|jpeg|png|gif'; // Jenis file yang diizinkan
+        // Tentukan path folder
+        $upload_path = './uploads/';
+        
+        // Cek apakah folder 'uploads' ada
+        if (!is_dir($upload_path)) {
+            // Jika tidak ada, buat folder baru
+            mkdir($upload_path, 0755, true);  // 0755 memberikan izin yang tepat pada folder
+        }
+        $config['allowed_types'] = 'jpg|jpeg|png|gif'; // Jenis file yang diizinkan
         $config['max_size'] = 2048; // Maksimal ukuran file (dalam KB)
         $config['encrypt_name'] = TRUE; // Enkripsi nama file agar tidak bentrok
         $this->upload->initialize($config);
