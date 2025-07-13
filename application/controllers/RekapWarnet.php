@@ -13,14 +13,14 @@ class RekapWarnet extends CI_Controller {
 	{
         $data['rekap'] = $this->DataUpload_model->get_all("datwarnet");
         $this->load->view("Template/header");
-        $this->load->view("Template/Navbar");
+        $this->load->view("Template/navBar");
         $this->load->view("Template/sidebar");
         $this->load->view("RekapWarnet/RekapHarian",$data);
         $this->load->view("Template/footer");
 	}
     public function TambahRekap(){
         $this->load->view("Template/header");
-        $this->load->view("Template/Navbar");
+        $this->load->view("Template/navBar");
         $this->load->view("Template/sidebar");
         $this->load->view("RekapWarnet/FormRekap");
         $this->load->view("Template/footer");
