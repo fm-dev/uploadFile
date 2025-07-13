@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class dataUpload extends CI_Model {
+class DataUpload extends CI_Model {
 
     public function __construct()
     {

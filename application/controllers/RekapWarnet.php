@@ -22,7 +22,7 @@ class RekapWarnet extends CI_Controller {
     {
         parent::__construct();
         $this->load->library('upload'); 
-        $this->load->model('dataUpload');
+        $this->load->model('DataUpload');
     }
 	public function index()
 	{
