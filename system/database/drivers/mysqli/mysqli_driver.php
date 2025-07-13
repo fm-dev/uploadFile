@@ -58,6 +58,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 	 *
 	 * @var	string
 	 */
+	public $failover = array();
 	public $dbdriver = 'mysqli';
 
 	/**
