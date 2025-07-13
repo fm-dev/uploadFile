@@ -11,7 +11,7 @@ class RekapWarnet extends CI_Controller {
     }
 	public function index()
 	{
-        $data['rekap'] = $this->dataUpload->get_all("datwarnet");
+        $data['rekap'] = $this->DataUpload_model->get_all("datwarnet");
         $this->load->view("Template/header");
         $this->load->view("Template/Navbar");
         $this->load->view("Template/sidebar");
@@ -43,7 +43,7 @@ class RekapWarnet extends CI_Controller {
                 "gambar" => $upload_data['file_name'], 
                 "created_by" => $this->input->post("nama_operator"),
             ];
-            $this->dataUpload->insert('datwarnet', $data);
+            $this->DataUpload_model->insert('datwarnet', $data);
             $imageUrl = base_url('uploads/' . $upload_data['file_name']); // Menghasilkan URL penuh ke gambar
             $message = "Balinet, Op dea, Jam 15.00 Shift 1 =".$this->input->post("jumlah") . $imageUrl; // Gabungkan pesan dan URL gambar
             $phoneNumber = '6285263676114'; // Ganti dengan nomor WhatsApp Anda (pastikan menggunakan format internasional)
