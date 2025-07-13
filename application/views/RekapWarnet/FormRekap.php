@@ -5,7 +5,7 @@
             <li class="breadcrumb-item active">Tambah Rekap</li>
         </ol>
         <div>
-            <form action="<?=base_url("RekapWarnet/simpanRekap")?>" method="post" enctype="multipart/form-data">
+            <form action="<?=base_url("index.php/RekapWarnet/simpanRekap/")?>" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="exampleNamaWarnet" class="form-label">Nama Warnet</label>
                     <input name="nama_warnet" type="text" class="form-control" id="exampleNamaWarnet" value="Bali Net" >

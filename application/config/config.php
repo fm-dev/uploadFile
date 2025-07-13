@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'http://localhost/uploadFile/';
-$config['base_url'] = 'https://appfajriproject.my.id/uploadFile/index.php/';
+$config['base_url'] = 'https://appfajriproject.my.id/uploadFile/';
 
 /*
 |--------------------------------------------------------------------------
